@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App / Tool Gallery</title>
+    
+    <!-- Materialize CSS CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+    <!--CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <!--Nav Bar For Medium & Large Screens-->
+    <nav>
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo">Patrick O'Shea</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="map.html">Map Gallery</a></li>
+            <li><a href="tool.html">App/Tool Gallery</a></li>
+            <li><a href="projects.html">Interactive Project Map</a></li>
+          </ul>
+        </div>
+    </nav>
+
+    <!--Nav Bar For Small Screens -->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="map.html">Map Gallery</a></li>
+        <li><a href="tool.html">App/Tool Gallery</a></li>
+        <li><a href="projects.html">Interactive Project Map</a></li>
+    </ul>
+
+    <div class="gallery">
+        <!-- Page Header -->
+        <header class="center-align">
+            <span class="white-text">
+            <h1>App / Tool Gallery</h1>
+            <p>Explore Apps and Tools I Have Made</p>
+            </span>
+        </header>
+
+        <!-- Gallery of Apps -->
+        <div class="row">
+            <!-- App Card 1 -->
+            <div class="col s12 m6 l6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/MIC.png" alt="Map 1">
+                        <span class="card-title"></span>
+                    </div>
+                    <div class="card-content">
+                        <!-- Tabs -->
+                        <ul class="tabs">
+                            <li class="tab col s4"><a href="#map1-title">Title</a></li>
+                            <li class="tab col s4"><a href="#map1-description">Description</a></li>
+                            <li class="tab col s4"><a href="#map1-link">Link to App</a></li>
+                        </ul>
+                        <div id="map1-title" class="tab-content active">
+                            <p>Notable Meteor Impacts</p>
+                        </div>
+                        <div id="map1-description" class="tab-content">
+                            <p>This app displays notable meteor impact craters from the University of New Brunswick's Earth Impact Database. Users can explore notable impact craters and glean useful information such as the age of the crater and its diameter.  </p>
+                        </div>
+                        <div id="map1-link" class="tab-content">
+                            <p><a href="https://pmoshea.000webhostapp.com/NotableMeteorImpacts.html">Notable Meteor Impacts</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Card 2 -->
+            <div class="col s12 m6 l6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/H.png" alt="Map 2">
+                        <span class="card-title"></span>
+                    </div>
+                    <div class="card-content">
+                        <!-- Tabs -->
+                        <ul class="tabs">
+                            <li class="tab col s4"><a href="#map2-title">Title</a></li>
+                            <li class="tab col s4"><a href="#map2-description">Description</a></li>
+                            <li class="tab col s4"><a href="#map2-link">Link to App</a></li>
+                        </ul>
+                        <div id="map2-title" class="tab-content active">
+                            <p>Hurricanes</p>
+                        </div>
+                        <div id="map2-description" class="tab-content">
+                            <p>This app displays historic hurricane tracts from the national weather service and color-codes them based on category. Users can use the slider to display tracts from different years, and click on the interactive timestamps to follow each of the storms as they progress.</p>
+                        </div>
+                        <div id="map2-link" class="tab-content">
+                            <p><a href="https://pmoshea.000webhostapp.com/Hurricanes.html">Hurricanes</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Card 3 -->
+            <div class="col s12 m6 l6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/HKLF.png" alt="Map 3">
+                        <span class="card-title"></span>
+                    </div>
+                    <div class="card-content">
+                        <!-- Tabs -->
+                        <ul class="tabs">
+                            <li class="tab col s4"><a href="#map3-title">Title</a></li>
+                            <li class="tab col s4"><a href="#map3-description">Description</a></li>
+                            <li class="tab col s4"><a href="#map3-link">Link to App</a></li>
+                        </ul>
+                        <div id="map3-title" class="tab-content active">
+                            <p>Historic Kilauea Lava Flows</p>
+                        </div>
+                        <div id="map3-description" class="tab-content">
+                            <p>This application displays historic lava flows from the Kilauea Volcano, between 1791 and 1982. The original GIS data was obtained from the USGS and can be found by searching doi:10.5066/P9B7904I. The slider allows users to cycle between the years 1791 and 1982, which updates the lava flows displayed and total lava flow area counter.
+                            </p>
+                        </div>
+                        <div id="map3-link" class="tab-content">
+                            <p><a href="https://pmoshea.000webhostapp.com/KilaueaLavaFlows.html">Historic Kilauea Lava Flows</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Card 4 -->
+            <div class="col s12 m6 l6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/tool.png" alt="Map 4">
+                        <span class="card-title"></span>
+                    </div>
+                    <div class="card-content">
+                        <!-- Tabs -->
+                        <ul class="tabs">
+                            <li class="tab col s4"><a href="#map4-title">Title</a></li>
+                            <li class="tab col s4"><a href="#map4-description">Description</a></li>
+                            <li class="tab col s4"><a href="#map4-link">Link to Tool</a></li>
+                        </ul>
+                        <div id="map4-title" class="tab-content active">
+                            <p>Water Body Generator</p>
+                        </div>
+                        <div id="map4-description" class="tab-content">
+                            <p>Repository currently contains a QGIS Plugin I created using python that generates waterbody features from a json input. The tool outputs a geopackage of polygon and polyline waterbody features. The files include scripts for the tool's backend functionality, custom class definitions, the GUI's user interface, and an example json file that can to test the tool. The readme file within teh waterbodyjsongenerator folder details installation instructions for the GUI.</p>
+                        </div>
+                        <div id="map4-link" class="tab-content">
+                            <p><a href="https://github.com/osheap/QGIS">Waterbody Generator Tool</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Materialize JS & jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            M.Sidenav.init(document.querySelectorAll('.sidenav'));
+            M.Tabs.init(document.querySelectorAll('.tabs'));
+        });
+        
+        document.addEventListener('click', function(event) {
+            if (event.target.classList.contains('tab')) {
+                const tabId = event.target.getAttribute('href').substring(1);
+                const tabs = event.target.closest('.card-content').querySelectorAll('.tab-content');
+                tabs.forEach(tab => tab.classList.remove('active'));
+                document.getElementById(tabId).classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

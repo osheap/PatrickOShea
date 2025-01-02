@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map with Leaflet</title>
+    
+    <!-- Import Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    
+    <!-- Import Leaflet CSS -->
+    <link href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet" />
+
+    <!--CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <!--Nav Bar For Medium & Large Screens-->
+    <nav>
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo">Patrick O'Shea</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="map.html">Map Gallery</a></li>
+            <li><a href="tool.html">App/Tool Gallery</a></li>
+            <li><a href="projects.html">Interactive Project Map</a></li>
+          </ul>
+        </div>
+      </nav>
+
+       <!--Nav Bar For Small Screens -->
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="map.html">Map Gallery</a></li>
+        <li><a href="tool.html">App/Tool Gallery</a></li>
+        <li><a href="projects.html">Interactive Project Map</a></li>
+      </ul>
+
+      <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <span class="white-text">
+                    <h3>Interactive Map</h3>
+                </span>
+            </div>
+        </div>
+        <!-- Map Container -->
+        <div class="row">
+            <div class="col s12">
+                <div id="map" class="responsive-map"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Import Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <!-- Import Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const elems = document.querySelectorAll('.sidenav');
+          const instances = M.Sidenav.init(elems);
+        });
+      </script>
+
+    <script>
+      // Initialize the map 
+    var map = L.map('map').setView([28.7041, 77.1025], 10);
+
+    // Add a Tile Layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    // Add a marker with an interactive pop-up
+    var marker_1 = L.marker([28.7041, 77.1025]).addTo(map);
+
+    // Define the pop-up content
+    var popupContent_1 = `
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Diurnal variations in the spatial patterns of air pollution across Delhi</span>
+                <p>We have analyzed the spatial patterns of seasonal-scale diurnal cycle of three main pollutants, NO2, SO2, and O3, across five stations in Delhi. We used hourly data collected by the local pollution monitoring agencies for the time period, October 2010 to September 2013. Harmonic analysis was used to detect the diurnal cycle in the observed patterns of pollutants across Delhi. The results of our study indicated a consistently higher level of concentrations of all the pollutants at two of the stations, IGI Airport and Civil Lines, while lower concentration levels were observed in the mixed use residential areas of Shadipur and NSIT Dwarka. A clockwise gradual progression in the time of maximum from east to west was observed in the case of SO2 during each season. The time of maximum for O3 for each season was in the early evening hours, 1800 local standard time (LST). Moreover, there were little spatial variations in the peak time of occurrence of NO2 and O3 at the seasonal scale.</p>
+                <br>
+                <p>Skills Utilized: Spatial Analysis, Cartography, Data Analysis, Field Observations</p>
+            </div>
+            <div class="card-action">
+                <a href="https://link.springer.com/article/10.1007/s00704-015-1441-y" target="_blank">See Publication Here</a>
+            </div>
+        </div>
+    `;
+
+    // Bind the pop-up to the marker
+    marker_1.bindPopup(popupContent_1);
+
+    // Open the pop-up on marker click
+    marker_1.on('click', function() {
+        marker_1.openPopup();
+    });
+
+    // Add a marker with an interactive pop-up
+    var marker_2 = L.marker([35.687, -105.9378]).addTo(map);
+
+    // Define the pop-up content
+    var popupContent_2 = `
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Borrego Canyon Road Geology Using Magnetic and Gravity Methods</span>
+                <p>As part of the Summer of Applied Geophysics Experience (SAGE), We conducted a magnetic and gravimetric survey of the Borrego Canyon Road near Santa Fe, NM. Gravity survey indicates that changes in gravity are mostly due to elevation trends along the road, with some influences due to geologic transition from ancestral rio grande deposits to quaternary alluvium. Magnetic trends indicate an increase in magnetic signature towards the north west, aligning with the known geologic transition. </p>
+                <br>
+                <p>Skills Utilized: Spatial Analysis, Field Survey, Data Analysis, Modeling</p>
+            </div>
+            <div class="card-action">
+                <a href="https://www.linkedin.com/in/pmoshea/details/experience/51035385/single-media-viewer/?profileId=ACoAAByKnO0BUiSHp29xlaLEEOtI18O0FvAAzrg" target="_blank">See Relevent Link Here</a>
+            </div>
+        </div>
+    `;
+
+    // Bind the pop-up to the marker
+    marker_2.bindPopup(popupContent_2);
+
+    // Open the pop-up on marker click
+    marker_2.on('click', function() {
+        marker_2.openPopup();
+    });
+
+     // Add a marker with an interactive pop-up
+     var marker_3 = L.marker([40.01499, -105.27055]).addTo(map);
+
+    // Define the pop-up content
+    var popupContent_3 = `
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">The Effect of Dune Slopes and Material Heterogeneity on the thermal Behavior of Dune Fields in Mar's Southern Hemisphere</span>
+                <p>We analyzed patterns in apparent thermal inertia (ATI) in three dune fields in Mars' Southern Hemisphere. We used High Resolution Imaging Science Experiment (HiRISE) 1m DEMs of the martian surface and MARSThERM to model ATI for slope mixtures, gran-size mixtures, and layered surfaces. Results indicate that ATI behavior is sensitive surface layering and the presence of duricrusts, while less so to slope and aspect. </p>
+                <br>
+                <p>Skills Utilized: Spatial Analysis, Cartography, Data Analysis, Modeling</p>
+            </div>
+            <div class="card-action">
+                <a href="https://www.linkedin.com/in/pmoshea/details/experience/1536206853857/single-media-viewer/?profileId=ACoAAByKnO0BUiSHp29xlaLEEOtI18O0FvAAzrg" target="_blank">See Relevent Link Here</a>
+            </div>
+        </div>
+    `;
+
+    // Bind the pop-up to the marker
+    marker_3.bindPopup(popupContent_3);
+
+    // Open the pop-up on marker click
+    marker_3.on('click', function() {
+        marker_3.openPopup();
+    });
+    </script>
+
+</body>
+</html>

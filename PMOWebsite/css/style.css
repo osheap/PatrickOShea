@@ -1,0 +1,166 @@
+/* Set the background color of the entire webpage */
+body {
+    background: url('../images/usgs.jpg') no-repeat center center fixed; /* Replace with your image path */
+    background-size: cover; /* Ensure the image covers the entire background */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% transparency */
+    z-index: -1; /* Ensure this layer stays behind the content */
+}
+
+/* Custom styles for the navbar */
+.nav-wrapper {
+    background-color: #5DA0AC; /* Make the entire navbar background transparent */
+}
+
+.nav-wrapper .brand-logo {
+    padding-left: 20px; /* Add padding to move the logo away from the edge */
+}
+
+@media screen and (max-width: 992px) {
+    .nav-wrapper .brand-logo {
+        padding-left: 15px; /* Adjust padding for smaller screens if needed */
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.biography .card-panel {
+    border-radius: 15px; /* Adjust the value to change the roundness */
+    padding: 20px; /* Optional: Add some padding for better aesthetics */
+}
+
+.career-objectives .card-panel {
+    border-radius: 15px; /* Adjust the value to change the roundness */
+    padding: 20px; /* Optional: Add some padding for better aesthetics */
+}
+
+.skills .card-panel {
+    border-radius: 15px; /* Adjust the value to change the roundness */
+    padding: 20px; /* Optional: Add some padding for better aesthetics */
+}
+
+.cv .card-panel {
+    border-radius: 15px; /* Adjust the value to change the roundness */
+    padding: 20px; /* Optional: Add some padding for better aesthetics */
+}
+
+.contact .card-panel {
+    border-radius: 15px; /* Adjust the value to change the roundness */
+    padding: 20px; /* Optional: Add some padding for better aesthetics */
+}
+
+.contact .card-panel {
+    border-radius: 15px; /* Adjust the value to change the roundness */
+    padding: 20px; /* Optional: Add some padding for better aesthetics */
+    margin-bottom: 10px; /* Space between items */
+}
+
+.custom-collection-item {
+    background-color: #bbdefb; /* blue lighten-4 */
+    border: none; /* Remove default border */
+    color: #0d47a1; /* Dark blue text to match the card-panel style */
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 10px; /* Space between items */
+}
+
+.card {
+    margin: 1px;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+/* Center cards horizontally within the row */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap onto the next line if needed */
+    justify-content: center; /* Center cards horizontally */
+}
+
+/* Make the row a flex container */
+.row.equal-height {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Ensure each column takes the appropriate width and height */
+.row.equal-height .col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make the card-panel stretch to fill the column */
+.row.equal-height .card-panel {
+    flex: 1; /* Makes the card-panel fill the remaining space in the column */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.gallery {
+    width: 80%; /* Ensure the container takes the full width of the viewport */
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px; /* Add some padding */
+}
+
+.card-content {
+    padding: 0;
+}
+.tabs .tab a {
+    color: #5DA0AC; /* Adjust the color as needed */
+}
+
+.tabs .tab a.active {
+    color: #07166c; /* Color for the active tab name */
+}
+
+.tabs .tab a:hover {
+    color: #07166c; /* Hover color for tabs */
+}
+
+.tab-content {
+    display: none;
+    color: #5DA0AC;
+}
+.tab-content.active {
+    display: block;
+}
+
+.tabs .indicator {
+    background-color: #07166c; /* Color of the underline indicator */
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+}
+
+.aspect-ratio-img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 400px; /* Set a maximum width */
+    max-height: 400px; /* Set a maximum height */
+}
+
+.circle {
+    border-radius: 50%; /* Ensure the image is displayed as a circle */
+    object-fit: cover; /* Ensure the image covers the circle area */
+}
+
+#map {
+    height: 700px;
+    margin-top: 20px;
+}

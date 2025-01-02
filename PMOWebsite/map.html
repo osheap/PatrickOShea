@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Gallery</title>
+    
+    <!-- Materialize CSS CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+    <!--CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <!--Nav Bar For Medium & Large Screens-->
+    <nav>
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo">Patrick O'Shea</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="map.html">Map Gallery</a></li>
+            <li><a href="tool.html">App/Tool Gallery</a></li>
+            <li><a href="projects.html">Interactive Project Map</a></li>
+          </ul>
+        </div>
+    </nav>
+
+    <!--Nav Bar For Small Screens -->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="map.html">Map Gallery</a></li>
+        <li><a href="tool.html">App/Tool Gallery</a></li>
+        <li><a href="projects.html">Interactive Project Map</a></li>
+    </ul>
+
+    <div class="gallery">
+        <!-- Page Header -->
+        <header class="center-align">
+            <span class="white-text">
+            <h1>Map Gallery</h1>
+            <p>Explore Maps I Have Made</p>
+            </span>
+        </header>
+
+        <!-- Gallery of Maps -->
+        <div class="row">
+            <!-- Map Card 1 -->
+            <div class="col s12 m6 l6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/map1.png" alt="Map 1">
+                        <span class="card-title"></span>
+                    </div>
+                    <div class="card-content">
+                        <!-- Tabs -->
+                        <ul class="tabs">
+                            <li class="tab col s4"><a href="#map1-title">Title</a></li>
+                            <li class="tab col s4"><a href="#map1-description">Description</a></li>
+                        </ul>
+                        <div id="map1-title" class="tab-content active">
+                            <p>Paradise Valley Trail Run Map</p>
+                        </div>
+                        <div id="map1-description" class="tab-content">
+                            <p>This is a trail map for the annual Paradise Valley Trail Run, south of San Francisco. The map is geared towards trail runners and gives information about the 5K and 10K routes, locations of the start/finish line and water stations, and an elevation profile. Colors and cartographic styling choices balance providing runners with valuable information while also conveying the sense fun an excitement this event is known for. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Card 2 -->
+            <div class="col s12 m6 l6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/BBL_TM.png" alt="Map 2">
+                        <span class="card-title"></span>
+                    </div>
+                    <div class="card-content">
+                        <!-- Tabs -->
+                        <ul class="tabs">
+                            <li class="tab col s4"><a href="#map2-title">Title</a></li>
+                            <li class="tab col s4"><a href="#map2-description">Description</a></li>
+                        </ul>
+                        <div id="map2-title" class="tab-content active">
+                            <p>Black Bayou Lake National Wildlife Refuge Trail Map.</p>
+                        </div>
+                        <div id="map2-description" class="tab-content">
+                            <p>This is a trail map designed for hikers along the Edgewater Trail, located within the Black Bayou Lake National Wildlife Refuge. The map displays the trail prominently within the main map while identifying surrounding natural and man-made landmarks. The inset map in the bottom left locates the Edgewater Trail relative to the greater Monroe area in Northern Louisiana. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Card 3 -->
+            <div class="col s12 m6 l6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/HI_1.png" alt="Map 3">
+                        <span class="card-title"></span>
+                    </div>
+                    <div class="card-content">
+                        <!-- Tabs -->
+                        <ul class="tabs">
+                            <li class="tab col s4"><a href="#map3-title">Title</a></li>
+                            <li class="tab col s4"><a href="#map3-description">Description</a></li>
+                        </ul>
+                        <div id="map3-title" class="tab-content active">
+                            <p>Health Insurance Coverage in New England by Education Level</p>
+                        </div>
+                        <div id="map3-description" class="tab-content">
+                            <p>This map shows how classifying datasets into bins can influence your spatial analysis results. This is done by comparing health insurance coverage rates amongst whites in New England using a normal distribution and an unclassified distribution at the county level.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Card 4 -->
+            <div class="col s12 m6 l6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/HI_2.png" alt="Map 4">
+                        <span class="card-title"></span>
+                    </div>
+                    <div class="card-content">
+                        <!-- Tabs -->
+                        <ul class="tabs">
+                            <li class="tab col s4"><a href="#map4-title">Title</a></li>
+                            <li class="tab col s4"><a href="#map4-description">Description</a></li>
+                        </ul>
+                        <div id="map4-title" class="tab-content active">
+                            <p>Health Insurance Coverage Rates Amongst Whites and Latinos in New England</p>
+                        </div>
+                        <div id="map4-description" class="tab-content">
+                            <p> This map shows the rates of insurance coverage for Hispanics, and non-hispanic whites relative to the national average of 92% at the county level. The results show that non-hispanic whites are either at or above the average rate, while hispanics have significantly more varied coverage rates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Materialize JS & jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            M.Sidenav.init(document.querySelectorAll('.sidenav'));
+            M.Tabs.init(document.querySelectorAll('.tabs'));
+        });
+        
+        document.addEventListener('click', function(event) {
+            if (event.target.classList.contains('tab')) {
+                const tabId = event.target.getAttribute('href').substring(1);
+                const tabs = event.target.closest('.card-content').querySelectorAll('.tab-content');
+                tabs.forEach(tab => tab.classList.remove('active'));
+                document.getElementById(tabId).classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
