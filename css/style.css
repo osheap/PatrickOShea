@@ -160,6 +160,12 @@ body {
     object-fit: cover; /* Ensure the image covers the circle area */
 }
 
+.disabled-link {
+    pointer-events: none;      /* Prevent clicking */
+    color: grey;               /* Grey out the text */
+    text-decoration: none;     /* Optionally remove underline */
+}
+
 #map {
     height: 700px;
     margin-top: 20px;
