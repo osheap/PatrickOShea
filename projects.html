@@ -44,7 +44,7 @@
         <div class="row">
             <div class="col s12">
                 <span class="white-text">
-                    <h3>Interactive Map</h3>
+                    <h3>Interactive Project Map</h3>
                 </span>
             </div>
         </div>
@@ -70,8 +70,8 @@
       </script>
 
     <script>
-      // Initialize the map 
-    var map = L.map('map').setView([28.7041, 77.1025], 10);
+    // Initialize the map 
+    var map = L.map('map').setView([0, 0], 2);
 
     // Add a Tile Layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -131,8 +131,8 @@
         marker_2.openPopup();
     });
 
-     // Add a marker with an interactive pop-up
-     var marker_3 = L.marker([40.01499, -105.27055]).addTo(map);
+    // Add a marker with an interactive pop-up
+    var marker_3 = L.marker([40.01499, -105.27055]).addTo(map);
 
     // Define the pop-up content
     var popupContent_3 = `
@@ -156,6 +156,61 @@
     marker_3.on('click', function() {
         marker_3.openPopup();
     });
+
+        // Add a marker with an interactive pop-up
+    var marker_4 = L.marker([-33.45, -70.67]).addTo(map);
+
+    // Define the pop-up content
+    var popupContent_4 = `
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Enhancing Authority Response to Storm Floods in Chile Leveraging Automatic Satellite Image Processing</span>
+                <p>The Metropolitan Region in central Chile is home to approximately 7 million people. The region frequently experiences disastrous floods, impacting tens of thousands of people and millions of dollars in damages. Remote sensing methods used to map flooding extents can help emergency responders allocate resources efficiently. Partnering with Centro de Información de Recursos Naturales (CIREN) in collaboration with the Embassy of Chile Agricultural Office, we leveraged NASA Earth Observations and hydraulic modeling to resolve flood extents for recent January 29, 2021, and August 23, 2023, flood events. Compared to the official August 2023 flooding extents, the Earth Observation and hydraulic modeling results were significantly less extensive. Additionally, we found that optical and radar datasets were an inconsistent means of capturing flood extents, while hydraulic modeling provides a more reliable tool for modeling future flood impacts within the Chile Metropolitan Region.</p>
+                <br>
+                <p>Skills Utilized: Hydraulic Modeling, Optical Imagery Analysis, Radar Imagery Analysis</p>
+            </div>
+            <div class="card-action">
+                <a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.devpedia.developexchange.com%2Fdp%2Fimages%2F8%2F83%2F2024Fall_LaRC_ChileMetroDisasters_Presentation_FD-Final.pptx&wdOrigin=BROWSELINK" target="_blank">See Relevent Link Here</a>
+            </div>
+        </div>
+    `;
+
+    // Bind the pop-up to the marker
+    marker_4.bindPopup(popupContent_4);
+
+    // Open the pop-up on marker click
+    marker_4.on('click', function() {
+        marker_4.openPopup();
+    });
+
+
+    // Add a marker with an interactive pop-up
+    var marker_5 = L.marker([32.7153300, -117.1572600]).addTo(map);
+
+    // Define the pop-up content
+    var popupContent_5 = `
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">FIRST 3D LITHOLOGIC MODEL OF THE SAN DIEGO COASTAL AQUIFER, SOUTHERN CALIFORNIA, USA</span>
+                <p> A three-dimensional (3D) lithologic model of the San Diego Coastal Aquifer was created as part of the United States Geological Survey (USGS) hydrogeologic study of the San Diego Tijuana area, USA and Mexico. The coastal aquifer provides a modest groundwater resource for the San Diego metropolitan area, primarily from the Plio-Pleistocene San Diego Formation and the overlying Quaternary deposits. Detailed mapping of subsurface lithology of the aquifer provides a greater understanding of the hydrogeologic system and will aid in future groundwater management. Lithologic data from 13 wells, including two deep USGS monitoring-well sites, were used to construct the 3D lithologic model in a 20 km2 area south of downtown San Diego. Downhole lithologic descriptions from drill logs were catalogued in a database and verified with borehole sediment cuttings and geophysical logs from the USGS well sites. Two lithologic classification schemes were used to construct the model: a simple scheme using only primary lithologic descriptors (e.g., clay, sand, gravel), and a more detailed scheme using primary and secondary descriptors (e.g, sandy clay, gravelly sand). Preliminary results indicate that lithologic trends are controlled by local geomorphology and regional changes in sea level and tectonics. A 1-km-wide lens of sand and gravel is interpreted to be the paleo-footprint of the modern day Sweetwater River. Increasing thickness of lithologic packages from east to west is consistent with down-drop of the structural San Diego Basin. Sediment deposition during different transgressive and regressive sea-level cycles may have influenced vertical and horizontal variations in lithology, such as a series of lithologic layers that appear to inhibit vertical groundwater flow, as indicated by hydraulic-head differences at the USGS well sites. Evaluation of depositional patterns also may identify sedimentary layers that are preferential conduits for groundwater flow; such highly permeable layers could be targets for future groundwater extraction but also could serve as pathways for seawater intrusion.</p>
+                <br>
+                <p>Skills Utilized: GIS, Groundwater Modeling</p>
+            </div>
+            <div class="card-action">
+                <a href="USGS_Poster.pdf" target="_blank">See Relevent Link Here</a>
+            </div>
+        </div>
+    `;
+
+    // Bind the pop-up to the marker
+    marker_5.bindPopup(popupContent_5);
+
+    // Open the pop-up on marker click
+    marker_5.on('click', function() {
+        marker_5.openPopup();
+    });
+
+
     </script>
 
 </body>
