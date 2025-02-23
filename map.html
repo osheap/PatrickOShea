@@ -163,6 +163,11 @@
             M.Sidenav.init(document.querySelectorAll('.sidenav'));
             M.Tabs.init(document.querySelectorAll('.tabs'));
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.tooltipped');
+            M.Tooltip.init(elems);
+        });
         
         document.addEventListener('click', function(event) {
             if (event.target.classList.contains('tab')) {
