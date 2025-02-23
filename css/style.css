@@ -110,6 +110,15 @@ body {
     box-sizing: border-box;
 }
 
+.column {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    margin: 0 auto;
+}
+
 .gallery {
     width: 80%; /* Ensure the container takes the full width of the viewport */
     margin: 0 auto; /* Center the container */
