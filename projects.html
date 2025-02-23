@@ -76,7 +76,8 @@
 
     // Add a Tile Layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
+        minZoom: 2, 
+        maxZoom: 18,  
         attribution: '© OpenStreetMap'
     }).addTo(map);
 
