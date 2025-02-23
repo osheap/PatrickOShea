@@ -82,7 +82,11 @@
           const elems = document.querySelectorAll('.sidenav');
           const instances = M.Sidenav.init(elems);
         });
-      </script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.tooltipped');
+            M.Tooltip.init(elems);
+        });
+    </script>
 
     <script>
     // Initialize the map 
