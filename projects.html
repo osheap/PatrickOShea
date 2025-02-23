@@ -72,13 +72,29 @@
 
     <script>
     // Initialize the map 
-    var map = L.map('map').setView([0, 0], 2);
+    var map = L.map('map', {
+        center: [0,0],
+        zoom: 3, 
+        minZoom: 3,
+        maxZoom: 18,
+        maxBounds:[
+            [-85,-190],
+            [85,190]
+        ],
+        maxBoundsViscosity: 1.0
+    }).setView([0, -20], 2);
 
     // Add a Tile Layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
+        minZoom: 3, 
+        maxZoom: 18,  
         attribution: '© OpenStreetMap'
     }).addTo(map);
+
+    var popupOptions = {
+        maxWidth: 250, // Controls the width of the popup
+        minWidth: 200  // Prevents it from shrinking too much
+    };
 
     // Add a marker with an interactive pop-up
     var marker_1 = L.marker([28.7041, 77.1025]).addTo(map);
@@ -87,9 +103,7 @@
     var popupContent_1 = `
         <div class="card">
             <div class="card-content">
-                <span class="card-title">Diurnal variations in the spatial patterns of air pollution across Delhi</span>
-                <p>We have analyzed the spatial patterns of seasonal-scale diurnal cycle of three main pollutants, NO2, SO2, and O3, across five stations in Delhi. We used hourly data collected by the local pollution monitoring agencies for the time period, October 2010 to September 2013. Harmonic analysis was used to detect the diurnal cycle in the observed patterns of pollutants across Delhi. The results of our study indicated a consistently higher level of concentrations of all the pollutants at two of the stations, IGI Airport and Civil Lines, while lower concentration levels were observed in the mixed use residential areas of Shadipur and NSIT Dwarka. A clockwise gradual progression in the time of maximum from east to west was observed in the case of SO2 during each season. The time of maximum for O3 for each season was in the early evening hours, 1800 local standard time (LST). Moreover, there were little spatial variations in the peak time of occurrence of NO2 and O3 at the seasonal scale.</p>
-                <br>
+                <span class="card-title" style="font-size: 16px; font-weight: bold;">Diurnal variations in the spatial patterns of air pollution across Delhi</span>
                 <p>Skills Utilized: Spatial Analysis, Cartography, Data Analysis, Field Observations</p>
             </div>
             <div class="card-action">
@@ -113,9 +127,7 @@
     var popupContent_2 = `
         <div class="card">
             <div class="card-content">
-                <span class="card-title">Borrego Canyon Road Geology Using Magnetic and Gravity Methods</span>
-                <p>As part of the Summer of Applied Geophysics Experience (SAGE), We conducted a magnetic and gravimetric survey of the Borrego Canyon Road near Santa Fe, NM. Gravity survey indicates that changes in gravity are mostly due to elevation trends along the road, with some influences due to geologic transition from ancestral rio grande deposits to quaternary alluvium. Magnetic trends indicate an increase in magnetic signature towards the north west, aligning with the known geologic transition. </p>
-                <br>
+                <span class="card-title" style="font-size: 16px; font-weight: bold;">Borrego Canyon Road Geology Using Magnetic and Gravity Methods</span>
                 <p>Skills Utilized: Spatial Analysis, Field Survey, Data Analysis, Modeling</p>
             </div>
             <div class="card-action">
@@ -138,10 +150,8 @@
     // Define the pop-up content
     var popupContent_3 = `
         <div class="card">
-            <div class="card-content">
-                <span class="card-title">The Effect of Dune Slopes and Material Heterogeneity on the thermal Behavior of Dune Fields in Mar's Southern Hemisphere</span>
-                <p>We analyzed patterns in apparent thermal inertia (ATI) in three dune fields in Mars' Southern Hemisphere. We used High Resolution Imaging Science Experiment (HiRISE) 1m DEMs of the martian surface and MARSThERM to model ATI for slope mixtures, gran-size mixtures, and layered surfaces. Results indicate that ATI behavior is sensitive surface layering and the presence of duricrusts, while less so to slope and aspect. </p>
-                <br>
+            <div class="card-content"> 
+                <span class="card-title" style="font-size: 16px; font-weight: bold;">The Effect of Dune Slopes and Material Heterogeneity on the thermal Behavior of Dune Fields in Mar's Southern Hemisphere</span>
                 <p>Skills Utilized: Spatial Analysis, Cartography, Data Analysis, Modeling</p>
             </div>
             <div class="card-action">
@@ -165,9 +175,7 @@
     var popupContent_4 = `
         <div class="card">
             <div class="card-content">
-                <span class="card-title">Enhancing Authority Response to Storm Floods in Chile Leveraging Automatic Satellite Image Processing</span>
-                <p>The Metropolitan Region in central Chile is home to approximately 7 million people. The region frequently experiences disastrous floods, impacting tens of thousands of people and millions of dollars in damages. Remote sensing methods used to map flooding extents can help emergency responders allocate resources efficiently. Partnering with Centro de Información de Recursos Naturales (CIREN) in collaboration with the Embassy of Chile Agricultural Office, we leveraged NASA Earth Observations and hydraulic modeling to resolve flood extents for recent January 29, 2021, and August 23, 2023, flood events. Compared to the official August 2023 flooding extents, the Earth Observation and hydraulic modeling results were significantly less extensive. Additionally, we found that optical and radar datasets were an inconsistent means of capturing flood extents, while hydraulic modeling provides a more reliable tool for modeling future flood impacts within the Chile Metropolitan Region.</p>
-                <br>
+                <span class="card-title" style="font-size: 16px; font-weight: bold;">Enhancing Authority Response to Storm Floods in Chile Leveraging Automatic Satellite Image Processing</span>
                 <p>Skills Utilized: Hydraulic Modeling, Optical Imagery Analysis, Radar Imagery Analysis</p>
             </div>
             <div class="card-action">
@@ -192,9 +200,7 @@
     var popupContent_5 = `
         <div class="card">
             <div class="card-content">
-                <span class="card-title">FIRST 3D LITHOLOGIC MODEL OF THE SAN DIEGO COASTAL AQUIFER, SOUTHERN CALIFORNIA, USA</span>
-                <p> A three-dimensional (3D) lithologic model of the San Diego Coastal Aquifer was created as part of the United States Geological Survey (USGS) hydrogeologic study of the San Diego Tijuana area, USA and Mexico. The coastal aquifer provides a modest groundwater resource for the San Diego metropolitan area, primarily from the Plio-Pleistocene San Diego Formation and the overlying Quaternary deposits. Detailed mapping of subsurface lithology of the aquifer provides a greater understanding of the hydrogeologic system and will aid in future groundwater management. Lithologic data from 13 wells, including two deep USGS monitoring-well sites, were used to construct the 3D lithologic model in a 20 km2 area south of downtown San Diego. Downhole lithologic descriptions from drill logs were catalogued in a database and verified with borehole sediment cuttings and geophysical logs from the USGS well sites. Two lithologic classification schemes were used to construct the model: a simple scheme using only primary lithologic descriptors (e.g., clay, sand, gravel), and a more detailed scheme using primary and secondary descriptors (e.g, sandy clay, gravelly sand). Preliminary results indicate that lithologic trends are controlled by local geomorphology and regional changes in sea level and tectonics. A 1-km-wide lens of sand and gravel is interpreted to be the paleo-footprint of the modern day Sweetwater River. Increasing thickness of lithologic packages from east to west is consistent with down-drop of the structural San Diego Basin. Sediment deposition during different transgressive and regressive sea-level cycles may have influenced vertical and horizontal variations in lithology, such as a series of lithologic layers that appear to inhibit vertical groundwater flow, as indicated by hydraulic-head differences at the USGS well sites. Evaluation of depositional patterns also may identify sedimentary layers that are preferential conduits for groundwater flow; such highly permeable layers could be targets for future groundwater extraction but also could serve as pathways for seawater intrusion.</p>
-                <br>
+                <span class="card-title" style="font-size: 16px; font-weight: bold;">FIRST 3D LITHOLOGIC MODEL OF THE SAN DIEGO COASTAL AQUIFER, SOUTHERN CALIFORNIA, USA</span>
                 <p>Skills Utilized: GIS, Groundwater Modeling</p>
             </div>
             <div class="card-action">
