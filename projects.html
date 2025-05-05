@@ -193,7 +193,7 @@
     var popupContent_4 = `
         <div class="card">
             <div class="card-content">
-                <span class="card-title" style="font-size: 16px; font-weight: bold;">Enhancing Authority Response to Storm Floods in Chile Leveraging Automatic Satellite Image Processing</span>
+                <span class="card-title" style="font-size: 16px; font-weight: bold;">NASA DEVELOP Project Fall 2024: Chile Metropolitan Regional Disasters, Enhancing Authority Response to Storm Floods in Chile Leveraging Automatic Satellite Image Processing</span>
                 <p>Skills Utilized: Hydraulic Modeling, Optical Imagery Analysis, Radar Imagery Analysis</p>
             </div>
             <div class="card-action">
@@ -218,7 +218,7 @@
     var popupContent_5 = `
         <div class="card">
             <div class="card-content">
-                <span class="card-title" style="font-size: 16px; font-weight: bold;">FIRST 3D LITHOLOGIC MODEL OF THE SAN DIEGO COASTAL AQUIFER, SOUTHERN CALIFORNIA, USA</span>
+                <span class="card-title" style="font-size: 16px; font-weight: bold;">First 3D Lithologic Model Of The San Diego Coastal Aquifer, Southern California, USA</span>
                 <p>Skills Utilized: GIS, Groundwater Modeling</p>
             </div>
             <div class="card-action">
@@ -233,6 +233,33 @@
     // Open the pop-up on marker click
     marker_5.on('click', function() {
         marker_5.openPopup();
+    });
+
+    // Add a marker with an interactive pop-up
+    var marker_6 = L.marker([31.9700, -81.0900]).addTo(map);
+
+    // Define the pop-up content
+    var popupContent_6 = `
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title" style="font-size: 16px; font-weight: bold;">NASA DEVELOP Project Spring 2025: Chatham County Health & Air Quality, Mapping Urban Heat To Identify Priority Mitigation Areas In Chatham County, Georgia</span>
+                <p>Skills Utilized: Python Programming, Remote Sensing, Spatail Analysis, GIS</p>
+            </div>
+            <div class="card-action">
+                <a href="2025Spring_LaRC_ChathamCountyHAQ_ImpactPoster.pptx" target="_blank">Download Poster Here</a>
+            </div>
+            <div class="card-action">
+                <a href="2025Spring_LaRC_ChathamCountyHAQ_Presentation_FD-final.pptx" target="_blank">Download Presentation Here</a>
+            </div>
+        </div>
+    `;
+
+    // Bind the pop-up to the marker
+    marker_6.bindPopup(popupContent_6);
+
+    // Open the pop-up on marker click
+    marker_6.on('click', function() {
+        marker_6.openPopup();
     });
 
 
